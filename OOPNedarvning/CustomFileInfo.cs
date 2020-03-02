@@ -66,8 +66,10 @@ namespace OOPNedarvning
             {
                 return (false, "Filens størrelse er ugyldig!");
             }
-            if
-                { }
+            else
+            {
+                return (true, String.Empty);
+            }
         }
     }
 }
