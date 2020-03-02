@@ -22,7 +22,6 @@ namespace OOPNedarvning
             {
                 return width;
             }
-
             set
             {
                 (bool isTooLarge, string message) validationResult = IsTooWide(value);
@@ -43,7 +42,6 @@ namespace OOPNedarvning
             {
                 return height;
             }
-
             set
             {
                 (bool isTooLarge, string message) validationResult = IsTooHigh(value);

@@ -8,12 +8,14 @@ namespace OOPNedarvning
         {
             try
             {
-                VideoFileInfo v = new VideoFileInfo("blablabla.xxx", 45, new DateTime(1969, 9, 6), 1920, 1080, 420);
+                VideoFileInfo v = new VideoFileInfo("VideoFileInfo.xxx", 45, new DateTime(1969, 9, 6), 1920, 1080, 420);
+                DocumentFileInfo d = new DocumentFileInfo("DocumentFileInfo.xxx", 45, new DateTime(1969, 9, 6));
                 Console.WriteLine(v.ToString());
+                Console.WriteLine(d.ToString());
+                Console.ReadLine();
             }
             catch(Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
             }
         }

@@ -19,7 +19,6 @@ namespace OOPNedarvning
             {
                 return duration;
             }
-
             set
             {
                 duration = value;

@@ -17,7 +17,6 @@ namespace OOPNedarvning
             {
                 return fileName;
             }
-
             set
             {
                 fileName = value;
@@ -30,7 +29,6 @@ namespace OOPNedarvning
             {
                 return fileSize;
             }
-
             set
             {
                 (bool isTooLarge, string errorMessage) validationResult = IsSizeTooLarge(value);
@@ -51,7 +49,6 @@ namespace OOPNedarvning
             {
                 return creationTime;
             }
-
             set
             {
                 creationTime = value;
