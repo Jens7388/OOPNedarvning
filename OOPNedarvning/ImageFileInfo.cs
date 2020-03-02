@@ -48,10 +48,7 @@ namespace OOPNedarvning
         }
         public override bool IsSizeTooLarge()
         {
-            if(fileSize > 45)
-            {
-                throw new ArgumentException("Filen må ikke være på mere end 45 mb!");
-            }
+            base.IsSizeTooLarge();
             if(width > 1920)
             {
                 throw new ArgumentException("Billedet er for bredt!");

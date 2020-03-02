@@ -9,7 +9,7 @@ namespace Test
         [Fact]
         public void Test1()
         {
-            VideoFileInfo v = new VideoFileInfo("VideoFileInfo.xxx", 45, new DateTime(1969, 9, 6), 1920, 1080, 420);
+            VideoFileInfo v = new VideoFileInfo("VideoFileInfo.xxx", 45, new DateTime(1969, 9, 6), 1920, 1081, 420);
             v.IsSizeTooLarge();
             DocumentFileInfo d = new DocumentFileInfo("DocumentFileInfo.xxx", 45, new DateTime(1969, 9, 6));
             d.IsSizeTooLarge();

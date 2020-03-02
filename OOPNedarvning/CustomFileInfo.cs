@@ -35,10 +35,6 @@ namespace OOPNedarvning
                 {
                     fileSize = value;
                 }
-                if(IsSizeTooLarge())
-                {
-                    
-                }
             }
         }
 
