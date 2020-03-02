@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOPNedarvning
 {
-    class VideoFileInfo: ImageFileInfo
+    public class VideoFileInfo: ImageFileInfo
     {
         private int duration;
         public VideoFileInfo(string fileName, int fileSize, DateTime creationTime, int width, int height, int duration)

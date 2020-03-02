@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOPNedarvning
 {
-    class DocumentFileInfo: CustomFileInfo
+    public class DocumentFileInfo: CustomFileInfo
     {
         public DocumentFileInfo(string fileName, int fileSize, DateTime creationTime)
             : base(fileName, fileSize, creationTime)

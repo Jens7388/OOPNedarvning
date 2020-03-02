@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOPNedarvning
 {
-    class ImageFileInfo: CustomFileInfo
+     public class ImageFileInfo: CustomFileInfo
     {
         protected int width;
         protected int height;
@@ -23,12 +23,7 @@ namespace OOPNedarvning
                 return width;
             }
             set
-            {
-                (bool isTooLarge, string message) validationResult = IsTooWide(value);
-                if(validationResult.isTooLarge)
-                {
-                    throw new ArgumentException(nameof(width), validationResult.message);
-                }
+            {             
                 if(value != width)
                 {
                     width = value;
@@ -43,38 +38,31 @@ namespace OOPNedarvning
                 return height;
             }
             set
-            {
-                (bool isTooLarge, string message) validationResult = IsTooHigh(value);
-                if(validationResult.isTooLarge)
-                {
-                    throw new ArgumentException(nameof(height), validationResult.message);
-                }
+            {              
+
                 if(value != height)
                 {
                     height = value;
                 }
             }
         }
-        public virtual (bool, string) IsTooHigh(int height)
+        public override bool IsSizeTooLarge()
         {
-            if(height > 1080)
+            if(fileSize > 45)
             {
-                return (true, "Billedet er for højt!");
+                throw new ArgumentException("Filen må ikke være på mere end 45 mb!");
             }
-            else
-            {
-                return (false, String.Empty);
-            }
-        }
-        public virtual (bool, string) IsTooWide(int width)
-        {
             if(width > 1920)
             {
-                return (true, "Billedet er for bredt!");
+                throw new ArgumentException("Billedet er for bredt!");
+            }
+            if(height > 1080)
+            {
+                throw new ArgumentException("Billedet er for højt!");
             }
             else
             {
-                return (false, String.Empty);
+                return false;
             }
         }
     }

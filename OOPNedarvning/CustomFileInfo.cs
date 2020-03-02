@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace OOPNedarvning
 {
-    abstract class CustomFileInfo
+    public abstract class CustomFileInfo
     {
         protected string fileName;
         protected int fileSize;
@@ -30,15 +30,14 @@ namespace OOPNedarvning
                 return fileSize;
             }
             set
-            {
-                (bool isTooLarge, string errorMessage) validationResult = IsSizeTooLarge(value);
-                if(validationResult.isTooLarge)
-                {
-                    throw new ArgumentException(nameof(fileSize), validationResult.errorMessage);
-                }
+            {              
                 if(value != fileSize)
                 {
                     fileSize = value;
+                }
+                if(IsSizeTooLarge())
+                {
+                    
                 }
             }
         }
@@ -61,15 +60,15 @@ namespace OOPNedarvning
             FileSize = fileSize;
             CreationTime = creationTime;
         }
-        public virtual (bool, string) IsSizeTooLarge(int fileSize)
-        {
+        public virtual bool IsSizeTooLarge()
+        {          
             if(fileSize > 45)
             {
-                return (true, "Filen må ikke være på mere end 45 mb!");
+                throw new ArgumentException("Filen må ikke være på mere end 45 mb!");                
             }
             else
             {
-                return (false, String.Empty);
+                return false;
             }
         }
         public override string ToString()
