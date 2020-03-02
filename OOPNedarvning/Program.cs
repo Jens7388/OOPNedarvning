@@ -8,7 +8,8 @@ namespace OOPNedarvning
         {
             try
             {
-                ImageFileInfo imageFile = new ImageFileInfo("blablabla.xxx", 45, new DateTime(1969, 9, 6), 1920, 1080);
+                VideoFileInfo v = new VideoFileInfo("blablabla.xxx", 45, new DateTime(1969, 9, 6), 1920, 1080, 420);
+                Console.WriteLine(v.ToString());
             }
             catch(Exception ex)
             {

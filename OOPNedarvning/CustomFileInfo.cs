@@ -58,7 +58,7 @@ namespace OOPNedarvning
             }
         }
 
-        protected CustomFileInfo(string fileName, int fileSize, DateTime creationTime) 
+        protected CustomFileInfo(string fileName, int fileSize, DateTime creationTime)
         {
             FileName = fileName;
             FileSize = fileSize;

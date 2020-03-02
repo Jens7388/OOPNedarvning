@@ -27,7 +27,7 @@ namespace OOPNedarvning
         }
         public override string ToString()
         {
-            return "Video:" + fileName;
+            return "Video: " + fileName;
         }
     }
 }

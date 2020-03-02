@@ -68,13 +68,13 @@ namespace OOPNedarvning
                 return (false, String.Empty);
             }
         }
-        public virtual (bool, string) IsTooWide(int width) 
+        public virtual (bool, string) IsTooWide(int width)
         {
-            if(width > 1920) 
+            if(width > 1920)
             {
                 return (true, "Billedet er for bredt!");
             }
-            else 
+            else
             {
                 return (false, String.Empty);
             }
