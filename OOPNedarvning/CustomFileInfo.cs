@@ -33,7 +33,15 @@ namespace OOPNedarvning
 
             set
             {
-                fileSize = value;
+                (bool isTooLarge, string errorMessage) validationResult = IsSizeTooLarge(value);
+                if(validationResult.isTooLarge)
+                {
+                    throw new ArgumentException(nameof(fileSize), validationResult.errorMessage);
+                }
+                if(value != fileSize)
+                {
+                    fileSize = value;
+                }
             }
         }
 
@@ -56,20 +64,20 @@ namespace OOPNedarvning
             FileSize = fileSize;
             CreationTime = creationTime;
         }
-        public (bool, string) ValidateFileSize(int fileSize)
+        public virtual (bool, string) IsSizeTooLarge(int fileSize)
         {
             if(fileSize > 45)
             {
-                return (false, "Filen må ikke være på mere end 45 mb!");
-            }
-            if(fileSize == 0) 
-            {
-                return (false, "Filens størrelse er ugyldig!");
+                return (true, "Filen må ikke være på mere end 45 mb!");
             }
             else
             {
-                return (true, String.Empty);
+                return (false, String.Empty);
             }
+        }
+        public override string ToString()
+        {
+            return ("Filnavn: " + fileName);
         }
     }
 }
