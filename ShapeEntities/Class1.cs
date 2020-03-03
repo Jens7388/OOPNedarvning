@@ -36,19 +36,17 @@ namespace ShapeEntities
                 y = value;
             }
         }
-        public virtual double CalculateArea()
-        {
-            return 0;
-        }
-        public virtual double CalculateCircumference()
-        {
-            return 0;
-        }
+
+        public abstract double CalculateArea();
+
+        public abstract double CalculateCircumference();
+
         public override string ToString()
         {
-            return $"Position: ({x}, {y})";
+            return $"Position: ({x},{y})\n";
         }
     }
+
     public class Circle: Shape
     {
         private double radius;
@@ -77,6 +75,7 @@ namespace ShapeEntities
                 }
             }
         }
+
         public (bool, string) ValidateRadius(double radius)
         {
             if(radius < 0.0)
@@ -88,19 +87,23 @@ namespace ShapeEntities
                 return (true, String.Empty);
             }
         }
+
         public override double CalculateArea()
         {
             return Math.PI * (radius * radius);
         }
+
         public override double CalculateCircumference()
         {
             return 2 * radius * Math.PI;
         }
+
         public override string ToString()
         {
-            return $"Position: ({x},{y}) Radius: {radius}";
+            return base.ToString() +  $"Radius: {radius}";
         }
     }
+
     public class Rectangle: Shape
     {
         protected double length;
@@ -110,6 +113,11 @@ namespace ShapeEntities
         {
             Length = length;
             Width = width;
+        }
+
+        protected Rectangle(int x, int y, double length) :base(x, y)
+        {
+            Length = length;
         }
 
         public virtual double Length
@@ -135,17 +143,67 @@ namespace ShapeEntities
                 width = value;
             }
         }
+
         public override double CalculateArea()
         {
             return length * width;
         }
+
         public override double CalculateCircumference()
         {
             return 2 * (length + width);
         }
+
         public static (bool, string) ValidateLength(double length)
         {
+            if(length < 0.0)
+            {
+                return (false, "Length må ikke være under 0.0!");
+            }
+            else
+            {
+                return (true, String.Empty);
+            }
+        }
 
+        public static (bool, string) ValidateWidth(double width)
+        {
+            if(width < 0.0)
+            {
+                return (false, "Width må ikke være under 0.0!");
+            }
+            else
+            {
+                return (true, String.Empty);
+            }
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Length: {length}\n Width: {width}";
+        }
+    }
+
+    public class Square: Rectangle
+    {
+        public Square(int x, int y, double length) : base(x, y, length)
+        {
+
+        }
+
+        public override double CalculateArea()
+        {
+            return length * length;
+        }
+
+        public override double CalculateCircumference()
+        {
+            return 2*(length + length);
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Length: {length}";
         }
     }
 }
