@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPNedarvningFormer", "OOPNedarvningFormer\OOPNedarvningFormer.csproj", "{5044F76A-0FDE-4C58-B367-8FD6A099858B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeEntities", "ShapeEntities\ShapeEntities.csproj", "{0FA5970E-661A-4C40-BE3F-5192682AD0F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5044F76A-0FDE-4C58-B367-8FD6A099858B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5044F76A-0FDE-4C58-B367-8FD6A099858B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5044F76A-0FDE-4C58-B367-8FD6A099858B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA5970E-661A-4C40-BE3F-5192682AD0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA5970E-661A-4C40-BE3F-5192682AD0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA5970E-661A-4C40-BE3F-5192682AD0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA5970E-661A-4C40-BE3F-5192682AD0F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
