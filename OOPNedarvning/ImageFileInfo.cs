@@ -16,7 +16,7 @@ namespace OOPNedarvning
             Height = height;
         }
 
-        public int Width
+        public virtual int Width
         {
             get
             {
@@ -31,7 +31,7 @@ namespace OOPNedarvning
             }
         }
 
-        public int Height
+        public virtual int Height
         {
             get
             {

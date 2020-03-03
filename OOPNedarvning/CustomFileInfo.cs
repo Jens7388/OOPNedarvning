@@ -11,7 +11,7 @@ namespace OOPNedarvning
         protected int fileSize;
         protected DateTime creationTime;
 
-        public string FileName
+        public virtual string FileName
         {
             get
             {
@@ -23,7 +23,7 @@ namespace OOPNedarvning
             }
         }
 
-        public int FileSize
+        public virtual int FileSize
         {
             get
             {
@@ -38,7 +38,7 @@ namespace OOPNedarvning
             }
         }
 
-        public DateTime CreationTime
+        public virtual DateTime CreationTime
         {
             get
             {
