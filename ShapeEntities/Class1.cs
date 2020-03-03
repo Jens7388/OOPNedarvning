@@ -49,7 +49,7 @@ namespace ShapeEntities
 
     public class Circle: Shape
     {
-        private double radius;
+        protected double radius;
 
         public Circle(int x, int y, double radius) : base(x, y)
         {
@@ -100,7 +100,7 @@ namespace ShapeEntities
 
         public override string ToString()
         {
-            return base.ToString() +  $"Radius: {radius}";
+            return base.ToString() +  $"Du har opretten en circle med følgende data: Radius: {radius}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
         }
     }
 
@@ -180,7 +180,7 @@ namespace ShapeEntities
 
         public override string ToString()
         {
-            return base.ToString() + $"Length: {length}\n Width: {width}";
+            return base.ToString() + $"Du har opretten en rectangle med følgende data: Length: {length}\n Width: {width}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
         }
     }
 
@@ -203,7 +203,7 @@ namespace ShapeEntities
 
         public override string ToString()
         {
-            return base.ToString() + $"Length: {length}";
+            return base.ToString() + $"Du har opretten en square med følgende data:\n Length: {length}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
         }
     }
 }
