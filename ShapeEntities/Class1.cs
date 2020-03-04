@@ -100,7 +100,7 @@ namespace ShapeEntities
 
         public override string ToString()
         {
-            return base.ToString() +  $"Du har opretten en circle med følgende data: Radius: {radius}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
+            return $"Du har opretten en circle med følgende data:\nPosition: ({x},{y})\nRadius: {radius}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
         }
     }
 
@@ -180,7 +180,7 @@ namespace ShapeEntities
 
         public override string ToString()
         {
-            return base.ToString() + $"Du har opretten en rectangle med følgende data: Length: {length}\n Width: {width}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
+            return $"Du har opretten en rectangle med følgende data:\nPosition: ({x},{y})\nLength: {length}\nWidth: {width}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
         }
     }
 
@@ -203,7 +203,7 @@ namespace ShapeEntities
 
         public override string ToString()
         {
-            return base.ToString() + $"Du har opretten en square med følgende data:\n Length: {length}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
+            return $"Du har opretten en square med følgende data:\nPosition: ({x},{y})\nLength: {length}\nArea: {CalculateArea()}\nCircumference: {CalculateCircumference()}";
         }
     }
 }
